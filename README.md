@@ -6,5 +6,6 @@
 ![KakaoTalk_20211124_164522278](https://user-images.githubusercontent.com/90877724/158593925-aba62501-e3d0-4173-abfc-25a2a2eed634.png)
 ![KakaoTalk_20211124_153942579_04](https://user-images.githubusercontent.com/90877724/158593642-0c158c6a-9ac9-4163-af49-13600be12b8a.png)
 ![KakaoTalk_20211124_153942579_05](https://user-images.githubusercontent.com/90877724/158593680-7aa27e18-131d-4d11-a011-123b4a21db1c.png)
+<img src = "/90877724/158593680-7aa27e18-131d-4d11-a011-123b4a21db1c.png" width = "700" height = "370">
 
 https://www.youtube.com/watch?v=r2s98eu02l8
