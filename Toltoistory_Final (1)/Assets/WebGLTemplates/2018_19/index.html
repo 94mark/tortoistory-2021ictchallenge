@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-us">
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+      <title>%UNITY_WEB_NAME%</title>
+
+      <link rel="stylesheet" href="/TemplateData/style.css" />
+
+      <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+      <script src="https://nexplayer.nexplayersdk.com/latest/nexplayer.js"></script>
+      <script src="https://d1s68t328djb4k.cloudfront.net/webgl/v1.0/NexPlayerUnity.js"></script>
+      <!-- <script src="js/NexPlayerUnity.js"></script> -->
+   </head>
+
+   <body>
+      <!-- Unity Container -->
+      <div class="webgl-content">
+         <!-- Nexplayer Logo-->
+         <img src="TemplateData/NexPlayer_logo_white_bckg.png" id= "nexPlayer_Logo" alt="Nexplayer_Logo" width="748" height="305">
+         <br><br><br>
+         <div
+            class="centered"
+            style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px;"
+         >
+            <!-- Unity WebGL will be here -->
+            <div
+               id="unity-container"
+               style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px;"
+            ></div>
+
+            <!-- This is a simple progress bar -->
+            <div id="loader" class="loader">
+               <div class="progressbar">
+                  <div id="fill" class="fill" style="width: 0%;"></div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <script>
+         // Custom progressbar function
+         function customProgress(unityInstance, progress) {
+            // Change fill of the progress bar
+            const fill = document.getElementById("fill");
+            fill.style.width = progress * 100 + "%";
+            fill.style.color = 0xFF0000FF;
+
+            // If loaded, remove loader
+            if (progress === 1) {
+               const loader = document.getElementById("loader");
+               loader.remove();
+            }
+         }
+      </script>
+      <script>
+         // Unity Initialization
+         var unityInstance = UnityLoader.instantiate(
+            "unity-container",
+            "%UNITY_WEBGL_BUILD_URL%",
+            { onProgress: customProgress }
+         );
+      </script>
+   </body>
+</html>
